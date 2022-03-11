@@ -1,4 +1,13 @@
+import { useState, useEffect } from 'react'
+import quoteService from './services/quoteService'
+
 const App = () => {
+  const [quote, setQuote] = useState(null)
+
+  useEffect(() => {
+    setQuote(quoteService.newQuote())
+  })
+
   return (
     <div
       id="quote-box"
@@ -8,13 +17,10 @@ const App = () => {
         id="text"
         className="mb-4 text-xl leading-relaxed before:content-[open-quote] after:content-[close-quote]"
       >
-        Design in art, is a recognition of the relation between various things,
-        various elements in the creative flux. You can't invent a design. You
-        recognize it, in the fourth dimension. That is, with your blood and your
-        bones, as well as with your eyes.
+        {quote.text}
       </blockquote>
       <p id="author" className="text-right mb-8">
-        &mdash; D. H. Lawrence
+        &mdash; {quote.author}
       </p>
 
       <div className="flex">
@@ -29,7 +35,7 @@ const App = () => {
           id="tweet-quote"
           className="px-3 py-2 bg-red-500 hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:ring focus:ring-red-400 text-white rounded-md border border-b-4 border-red-900"
           href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-            `"${'Design in art, is a recognition of...'}" — D. H. Lawrence`
+            `"${quote.text}" — ${quote.author}`
           )}`}
           target="_blank"
           rel="noreferrer nofollow"
