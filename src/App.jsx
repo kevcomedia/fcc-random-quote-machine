@@ -20,7 +20,7 @@ const App = () => {
     >
       {quote && (
         <div className="mb-8">
-          <Quote text={quote.text} author={quote.author} />
+          <Quote quote={quote} />
         </div>
       )}
 

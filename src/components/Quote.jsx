@@ -1,4 +1,6 @@
-const Quote = ({ text, author }) => {
+const Quote = ({ quote }) => {
+  const { text, author } = quote
+
   return (
     <>
       <blockquote
