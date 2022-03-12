@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div
       id="quote-box"
-      className="max-w-lg max-h-screen overflow-y-auto bg-white text-zinc-800 p-16 rounded-md drop-shadow-lg"
+      className="w-full max-w-lg max-h-screen overflow-y-auto bg-white text-zinc-800 p-16 rounded-md drop-shadow-lg"
     >
       {quote && (
         <>
