@@ -9,10 +9,10 @@ const App = () => {
   return (
     <div
       id="quote-box"
-      className="w-full max-w-lg max-h-screen overflow-y-auto bg-white text-zinc-800 p-16 rounded-md drop-shadow-lg"
+      className="w-full max-w-lg max-h-screen bg-white text-zinc-800 md:my-10 p-8 md:p-16 rounded-md drop-shadow-lg flex flex-col"
     >
       {quote && (
-        <div className="mb-8">
+        <div className="mb-8 grow overflow-y-auto">
           <Quote quote={quote} />
         </div>
       )}

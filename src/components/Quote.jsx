@@ -5,7 +5,7 @@ const Quote = ({ quote }) => {
     <>
       <blockquote
         id="text"
-        className="mb-4 text-xl leading-relaxed before:content-[open-quote] after:content-[close-quote]"
+        className="mb-4 text-lg md:text-xl leading-normal md:leading-relaxed before:content-[open-quote] after:content-[close-quote]"
       >
         {text}
       </blockquote>
