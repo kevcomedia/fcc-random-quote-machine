@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Quote from './components/Quote'
 import quoteService from './services/quoteService'
 
 const App = () => {
@@ -18,17 +19,9 @@ const App = () => {
       className="w-full max-w-lg max-h-screen overflow-y-auto bg-white text-zinc-800 p-16 rounded-md drop-shadow-lg"
     >
       {quote && (
-        <>
-          <blockquote
-            id="text"
-            className="mb-4 text-xl leading-relaxed before:content-[open-quote] after:content-[close-quote]"
-          >
-            {quote.text}
-          </blockquote>
-          <p id="author" className="text-right mb-8">
-            &mdash; {quote.author}
-          </p>
-        </>
+        <div className="mb-8">
+          <Quote text={quote.text} author={quote.author} />
+        </div>
       )}
 
       <div className="flex mb-2">
