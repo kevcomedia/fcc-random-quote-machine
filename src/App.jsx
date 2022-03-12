@@ -1,19 +1,10 @@
-import { useState, useEffect } from 'react'
 import Quote from './components/Quote'
 import Buttons from './components/Buttons'
 import Credits from './components/Credits'
-import quoteService from './services/quoteService'
+import useQuote from './hooks/useQuote'
 
 const App = () => {
-  const [quote, setQuote] = useState(null)
-
-  useEffect(() => {
-    quoteService.newQuote().then(setQuote)
-  }, [])
-
-  const handleNewQuoteClick = () => {
-    quoteService.newQuote().then(setQuote)
-  }
+  const [quote, newQuote] = useQuote()
 
   return (
     <div
@@ -27,7 +18,7 @@ const App = () => {
       )}
 
       <div className="mb-2">
-        <Buttons quote={quote} onNewQuote={handleNewQuoteClick} />
+        <Buttons quote={quote} onNewQuote={newQuote} />
       </div>
 
       <Credits />
