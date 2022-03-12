@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowsRotate } from '@fortawesome/free-solid-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+
 const Buttons = ({ quote, onNewQuote }) => {
   const handleNewQuoteClick = () => {
     onNewQuote()
@@ -14,7 +18,7 @@ const Buttons = ({ quote, onNewQuote }) => {
         type="button"
         onClick={handleNewQuoteClick}
       >
-        New quote
+        <FontAwesomeIcon className="mr-1" icon={faArrowsRotate} /> New quote
       </button>
       {quote && (
         <a
@@ -26,7 +30,7 @@ const Buttons = ({ quote, onNewQuote }) => {
           target="_blank"
           rel="noreferrer nofollow"
         >
-          Tweet
+          <FontAwesomeIcon className="mr-1" icon={faTwitter} /> Tweet
         </a>
       )}
     </div>
