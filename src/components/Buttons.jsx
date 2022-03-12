@@ -8,7 +8,7 @@ const Buttons = ({ quote, onNewQuote }) => {
   }
 
   const buttonClasses =
-    'px-3 py-2 bg-red-500 hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:ring focus:ring-red-400 text-white rounded-md border border-b-4 border-red-900'
+    'px-3 py-2 bg-red-500 hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:ring focus:ring-red-400 text-white rounded-md border border-b-4 active:border-b border-red-900'
 
   return (
     <div className="flex">
