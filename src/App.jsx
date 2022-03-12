@@ -31,7 +31,7 @@ const App = () => {
         </>
       )}
 
-      <div className="flex">
+      <div className="flex mb-2">
         <button
           id="new-quote"
           className="px-3 py-2 mr-2 bg-red-500 hover:bg-red-600 focus:bg-red-600 focus:outline-none focus:ring focus:ring-red-400 text-white rounded-md border border-b-4 active:border-b border-red-900"
@@ -54,6 +54,20 @@ const App = () => {
           </a>
         )}
       </div>
+
+      <p className="text-zinc-500">
+        <small>
+          API from{' '}
+          <a
+            className="underline focus:outline-none focus:ring focus:ring-red-400"
+            href="https://quotesondesign.com/"
+            target="_blank"
+            rel="noreferrer nofollow"
+          >
+            Quotes on Design
+          </a>
+        </small>
+      </p>
     </div>
   )
 }
