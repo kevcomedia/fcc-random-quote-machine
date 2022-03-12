@@ -35,7 +35,7 @@ const quotes = [
 
 const newQuote = () => {
   const randomIndex = Math.floor(Math.random() * quotes.length)
-  return quotes[randomIndex]
+  return Promise.resolve(quotes[randomIndex])
 }
 
 export default { newQuote }

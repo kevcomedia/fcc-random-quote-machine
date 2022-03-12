@@ -8,11 +8,11 @@ const App = () => {
   const [quote, setQuote] = useState(null)
 
   useEffect(() => {
-    setQuote(quoteService.newQuote())
+    quoteService.newQuote().then(setQuote)
   }, [])
 
   const handleNewQuoteClick = () => {
-    setQuote(quoteService.newQuote())
+    quoteService.newQuote().then(setQuote)
   }
 
   return (
